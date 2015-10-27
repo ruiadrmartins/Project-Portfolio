@@ -8,17 +8,19 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment implements View.OnClickListener {
+public class MainActivityFragment extends Fragment {
 
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button4;
-    private Button button5;
-    private Button button6;
+    @Bind({ R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6 })
+    List<Button> buttons;
 
     final private String message = "This button will launch ";
 
@@ -30,25 +32,12 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
-        button1 = (Button) rootView.findViewById(R.id.button1);
-        button2 = (Button) rootView.findViewById(R.id.button2);
-        button3 = (Button) rootView.findViewById(R.id.button3);
-        button4 = (Button) rootView.findViewById(R.id.button4);
-        button5 = (Button) rootView.findViewById(R.id.button5);
-        button6 = (Button) rootView.findViewById(R.id.button6);
-
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
-        button3.setOnClickListener(this);
-        button4.setOnClickListener(this);
-        button5.setOnClickListener(this);
-        button6.setOnClickListener(this);
+        ButterKnife.bind(this, rootView);
 
         return rootView;
     }
 
-    @Override
+    @OnClick({ R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6 })
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.button1:
@@ -72,5 +61,11 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 }
