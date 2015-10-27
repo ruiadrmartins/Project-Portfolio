@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="UdacityButton">
+        <item name="android:background">#f08c35</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="RedButton">
+        <item name="android:background">#f44336</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+</resources>
