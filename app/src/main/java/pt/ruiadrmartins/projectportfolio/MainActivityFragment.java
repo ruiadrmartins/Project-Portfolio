@@ -38,6 +38,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
         button5 = (Button) rootView.findViewById(R.id.button5);
         button6 = (Button) rootView.findViewById(R.id.button6);
 
+        //
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
