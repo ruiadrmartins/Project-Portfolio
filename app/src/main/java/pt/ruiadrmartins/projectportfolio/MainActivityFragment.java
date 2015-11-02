@@ -20,7 +20,7 @@ import butterknife.OnClick;
 public class MainActivityFragment extends Fragment {
 
     final private String message = "This button will launch ";
-    @Bind({ R.id.spotifyStreamerButton, R.id.scoresAppButton, R.id.libraryAppButton, R.id.buildItBiggerButton, R.id.xyzReaderButton, R.id.capstoneButton })
+    @Bind({ R.id.popularMoviesButton, R.id.scoresAppButton, R.id.libraryAppButton, R.id.buildItBiggerButton, R.id.xyzReaderButton, R.id.capstoneButton })
     List<Button> buttons;
 
     public MainActivityFragment() {
@@ -35,26 +35,26 @@ public class MainActivityFragment extends Fragment {
         return rootView;
     }
 
-    @OnClick({ R.id.spotifyStreamerButton, R.id.scoresAppButton, R.id.libraryAppButton, R.id.buildItBiggerButton, R.id.xyzReaderButton, R.id.capstoneButton })
+    @OnClick({ R.id.popularMoviesButton, R.id.scoresAppButton, R.id.libraryAppButton, R.id.buildItBiggerButton, R.id.xyzReaderButton, R.id.capstoneButton })
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.spotifyStreamerButton:
-                Toast.makeText(getActivity(), message + getResources().getString(R.string.spotifyStreamerProject), Toast.LENGTH_SHORT).show();
+            case R.id.popularMoviesButton:
+                Toast.makeText(getActivity(), message + getString(R.string.popularMoviesProject), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.scoresAppButton:
-                Toast.makeText(getActivity(), message + getResources().getString(R.string.scoresAppProject), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message + getString(R.string.scoresAppProject), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.libraryAppButton:
-                Toast.makeText(getActivity(), message + getResources().getString(R.string.libraryAppProject), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message + getString(R.string.libraryAppProject), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.buildItBiggerButton:
-                Toast.makeText(getActivity(), message + getResources().getString(R.string.buildItBiggerProject), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message + getString(R.string.buildItBiggerProject), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.xyzReaderButton:
-                Toast.makeText(getActivity(), message + getResources().getString(R.string.xyzReaderProject), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message + getString(R.string.xyzReaderProject), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.capstoneButton:
-                Toast.makeText(getActivity(), message + getResources().getString(R.string.capstoneProject), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), message + getString(R.string.capstoneProject), Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;

@@ -2,7 +2,7 @@
     <string name="app_name">Project Portfolio</string>
     <string name="action_settings">Settings</string>
     <string name="title">My Nanodegree Apps!</string>
-    <string name="spotifyStreamerProject">Spotify Streamer</string>
+    <string name="popularMoviesProject">Popular Movies</string>
     <string name="scoresAppProject">Scores App</string>
     <string name="libraryAppProject">Library App</string>
     <string name="buildItBiggerProject">Build It Bigger</string>
